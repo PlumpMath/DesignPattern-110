@@ -1,0 +1,38 @@
+package model.unit;
+
+import model.board.Cell;
+import model.weapon.Weapon;
+
+public class Marksman extends Unit
+{
+	Weapon weapon; 
+	
+
+	public Marksman(String name, int health, int damage, boolean meleeAttack, int startingX, int startingY,
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius)
+	{   super(name,health,damage,meleeAttack,startingX,startingY,attackRadius,cannotUseSpecialPower,movementRadius);
+
+			icon = 'M';
+			
+		}
+
+	public Weapon getWeapon() {
+		return weapon;
+	}
+
+	public void setWeapon(Weapon weapon) {
+		this.weapon = weapon;
+	}	
+
+	
+	public boolean isMoveValid(Cell initialCell, Cell finalCell)
+	{
+		return validMovement.isValidDiagonal(initialCell, finalCell, movementRadius)
+				|| validMovement.isValidVertical(initialCell, finalCell, movementRadius);
+	}
+	
+	public int doubleDamage(int damage)
+	{
+		return 2*damage;	
+	}
+}
