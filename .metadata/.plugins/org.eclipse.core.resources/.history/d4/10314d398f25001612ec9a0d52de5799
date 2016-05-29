@@ -1,0 +1,72 @@
+package utilities;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import interfaces.Weapons;
+import model.weapon.Sword;
+import model.weapon.Weapon;
+
+public class PlayerUtilities {
+
+	public static ArrayList<String>villians = new ArrayList<String>();
+	public static ArrayList<String> heroes = new ArrayList<String>();
+	public static HashMap<String,Weapons> lstweapon = new  HashMap<String,Weapons>();
+	public static ArrayList<String> fetchheroes(){
+	/*heroes.add("Soldier");
+	heroes.add("Scout");
+	heroes.add("Avatar");*/
+	
+	return heroes;
+	}
+	
+	
+    public void addHeroes(String str){
+    	
+    	heroes.add(str);
+    }
+	
+public void addVillains(String str){
+    	villians.add(str);
+    	
+    }
+    
+	
+	public static ArrayList<String> fetchvillians(){
+		/*villians.add("FireLord");
+		villians.add("Henchman");
+		villians.add("Marksman");*/
+		
+	return villians;
+
+	
+	
+	}	
+	
+	
+public static    HashMap<String,Weapons>fetchWeapons(String unit,String weaponname){
+	   Weapon weapon =new Weapon(1, 1,"newweapon");
+	if(weaponname == "Sword")
+	lstweapon.put(unit,new Sword(weapon,unit+"sword"));
+	
+	if(weaponname == "Spear")
+		lstweapon.put(unit,new Spear(weapon,unit+"sword"));
+		
+	if(weaponname == "Bow")
+		lstweapon.put(unit,new Sword(weapon,unit+"sword"));
+		
+	if(weaponname == "Sword")
+		lstweapon.put(unit,new Sword(weapon,unit+"sword"));
+		
+	    if
+	    
+	    
+    
+	
+	return lstweapon;
+}
+	
+	
+	
+	
+}

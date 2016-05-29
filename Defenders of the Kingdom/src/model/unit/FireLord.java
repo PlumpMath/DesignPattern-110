@@ -20,7 +20,22 @@ public class FireLord extends Unit
 		icon = 'F';
 	
 	}
+	public FireLord(String name, int health, int damage, boolean meleeAttack,
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius) {
 	
+		super(name,health,damage,meleeAttack,attackRadius,cannotUseSpecialPower,movementRadius);
+		  
+		icon = 'F';
+
+	}
+
+	
+	public FireLord(){
+
+		icon = 'F';
+
+		
+	}
 	public Weapons getWeapon() {
 		return weapon;
 	}

@@ -16,6 +16,24 @@ public class Marksman extends Unit
 			icon = 'M';
 			
 		}
+	
+	
+	
+	
+	public Marksman(String name, int health, int damage, boolean meleeAttack,
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius) {
+	
+		super(name,health,damage,meleeAttack,attackRadius,cannotUseSpecialPower,movementRadius);
+		  
+		icon = 'M';
+
+	}
+
+	
+	
+	public Marksman(){
+		icon = 'M';
+	}
 
 	public Weapons getWeapon() {
 		return weapon;

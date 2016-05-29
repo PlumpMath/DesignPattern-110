@@ -61,6 +61,25 @@ public class PlayerCreator
 		int unit0 = boardController.getChoice("Team", "Choose your 1st unit " + players[whichPlayer].getName() + ":", options1);
 		int unit1 = boardController.getChoice("Team", "Choose your 2nd unit " + players[whichPlayer].getName() + ":", options1);
 		int unit2 = boardController.getChoice("Team", "Choose your 3rd unit " + players[whichPlayer].getName() + ":", options1);
+		
+	//	
+		String[] options2 = new String[4];
+		options2[0] = "Sword";
+		options2[1] = "Spear";
+		options2[2] = "Bow";
+		options2[3] = "Arrow";
+		String u1 = boardController.getInput("Is this your first  unit  say yes or no"+options1[unit0]);
+	
+		
+		int w1 = boardController.getChoice("Team", "Choose your 1st weapon " + players[whichPlayer].getName() + ":", options2);
+		playerUtilities.setWeapons(options1[unit0],options2[w1]);
+		String u2 = boardController.getInput("Is this your 2nd  unit  say yes or no"+options1[unit1]);
+		
+		int w2 = boardController.getChoice("Team", "Choose your 2nd weapon "+ players[whichPlayer].getName() + ":", options2);
+		playerUtilities.setWeapons(options1[unit1],options2[w2]);
+		String u3 = boardController.getInput("Is this your 3 rd Unit  say yes or no"+options1[unit2]);
+		int w3 = boardController.getChoice("Team", "Choose your 3rd weapon " + players[whichPlayer].getName() + ":", options2);
+		playerUtilities.setWeapons(options1[unit2],options2[w3]);
 		if(team==0){
 			playerUtilities.addHeroes(options1[unit0]);
 			playerUtilities.addHeroes(options1[unit1]);
@@ -73,13 +92,32 @@ public class PlayerCreator
 		}
 		
 		for(String str :options1){
-			if(str!=options1[unit0]&&str!=options[unit1]&&str!=options[unit2]){
+			if(str!=options1[unit0]&&str!=options1[unit1]&&str!=options1[unit2]){
 				if(team==0)
 				playerUtilities.addVillains(str);
 				else
 					playerUtilities.addHeroes(str);
 			}
 		}
+		
+		
+	/*	String[] options2 = new String[4];
+		
+		options[0] = "Sword";
+		options[1] = "Spear";
+		options[2] = "Bow";
+		options[3] = "Arrow";
+	String u1 = boardController.getInput("for unit "+options1[unit0]+" select from following weapon");
+		
+		int w1 = boardController.getChoice("Team", "Choose your 1st weapon " + players[whichPlayer].getName() + ":", options2);
+		String u2 = boardController.getInput("for unit "+options1[unit1]+" select from following weapon");
+			
+		int w2 = boardController.getChoice("Team", "Choose your 2nd weapon "+unit1 + players[whichPlayer].getName() + ":", options2);
+		String u3 = boardController.getInput("for unit "+options1[unit2]+" select from following weapon");
+		int w3 = boardController.getChoice("Team", "Choose your 3rd weapon " + players[whichPlayer].getName() + ":", options2);*/
+		
+		
+		
 
 		if (team == 0)
 		{  str = 	options[0];
@@ -190,6 +228,32 @@ public class PlayerCreator
 			}
 		}
 		
+		
+		
+		
+		
+		String[] options2 = new String[4];
+		
+		options[0] = "Sword";
+		options[1] = "Spear";
+		options[2] = "Bow";
+		options[3] = "Arrow";
+	String u1 = boardController.getInput("for unit "+options1[unit0]+" select from following weapon");
+		
+		int w1 = boardController.getChoice("Team", "Choose your 1st weapon " + players[whichPlayer].getName() + ":", options2);
+		String u2 = boardController.getInput("for unit "+options1[unit1]+" select from following weapon");
+			
+		int w2 = boardController.getChoice("Team", "Choose your 2nd weapon "+unit1 + players[whichPlayer].getName() + ":", options2);
+		String u3 = boardController.getInput("for unit "+options1[unit2]+" select from following weapon");
+		int w3 = boardController.getChoice("Team", "Choose your 3rd weapon " + players[whichPlayer].getName() + ":", options2);
+		
+		
+		
+		
+		
+		
+		
+		
 		if (team == 0)
 		{  str = 	options[0];
 		HeroesFactory  objheroes =new HeroesFactory();
@@ -200,6 +264,11 @@ public class PlayerCreator
 			Villains villain =   (Villains)objvillain.createTeam();	 
 			players[whichPlayer == 0 ? 1 : 0].setTeam(villain);
 		}
+		
+		
+		
+		
+		
 		
 		else if (team == 1)
 		{ str = 	options[1];

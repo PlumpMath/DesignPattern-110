@@ -23,6 +23,12 @@ public abstract class Unit extends Entity  implements Cloneable
 	@JsonIgnore
 	protected Team team;
 	protected Weapons weapons;
+	
+	
+	
+	
+	
+	
 	public Weapons getWeapons() {
 		return weapons;
 	}
@@ -82,7 +88,7 @@ public abstract class Unit extends Entity  implements Cloneable
 	
 	}
 
-	
+
 	
 	
 	
@@ -102,6 +108,17 @@ public abstract class Unit extends Entity  implements Cloneable
 		this.movementRadius = movementRadius;
 	}
 
+	public Unit(String name, int health, int damage, boolean meleeAttack,
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius) {
+	
+		this.name = name;
+		this.health = health;
+		this.damage = damage;
+		this.meleeAttack = meleeAttack;
+	    this.attackRadius = attackRadius;
+		this.cannotUseSpecialPower = cannotUseSpecialPower;
+		this.movementRadius = movementRadius;
+	}
 
 
 

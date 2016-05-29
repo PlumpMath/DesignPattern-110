@@ -21,6 +21,28 @@ public class Soldier extends Unit
 		attackflag = false;
 
 	}
+	
+	
+	public Soldier(String name, int health, int damage, boolean meleeAttack,
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius) {
+	
+		super(name,health,damage,meleeAttack,attackRadius,cannotUseSpecialPower,movementRadius);
+		  
+		icon = 'S';
+
+	}
+
+	
+	
+	
+	public Soldier(){
+		
+		icon = 'S';
+		attackflag = false;
+		
+	}
+	
+	
 	public Weapons getWeapon() {
 		return weapon;
 	}

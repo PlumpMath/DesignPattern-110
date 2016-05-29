@@ -19,6 +19,25 @@ public class Scout extends Unit
 	}
 	
 	
+	public Scout(String name, int health, int damage, boolean meleeAttack,
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius) {
+	
+		super(name,health,damage,meleeAttack,attackRadius,cannotUseSpecialPower,movementRadius);
+		  
+		icon = 'C';
+
+	}
+
+	
+	
+	
+	public Scout(){
+		
+
+		icon = 'C';
+	}
+	
+	
 	public Weapons getWeapon() {
 		return weapon;
 	}

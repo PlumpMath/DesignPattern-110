@@ -9,7 +9,7 @@ public class WeaponDecorator  implements Weapons
 	protected int damage;
 	protected int range;
 	protected String name;
-	protected WeaponDecorator weaponDecorator;
+	//protected WeaponDecorator weaponDecorator;
 	
 	public WeaponDecorator(Weapons weapons)
 	{

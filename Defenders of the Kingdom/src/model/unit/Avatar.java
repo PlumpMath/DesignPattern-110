@@ -21,6 +21,21 @@ public class Avatar extends Unit
 		
 	}
 	
+	public Avatar(String name, int health, int damage, boolean meleeAttack,
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius) {
+	
+		super(name,health,damage,meleeAttack,attackRadius,cannotUseSpecialPower,movementRadius);
+		  
+		icon = 'A';
+
+	}
+
+	
+	
+	
+	public Avatar(){
+		icon = 'A';
+	}
 	public Weapons getWeapon() {
 		return weapon;
 	}

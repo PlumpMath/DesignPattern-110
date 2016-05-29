@@ -18,7 +18,24 @@ public class Henchman extends Unit
 	}
 	
 	
+	public Henchman(String name, int health, int damage, boolean meleeAttack,
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius) {
+	
+		super(name,health,damage,meleeAttack,attackRadius,cannotUseSpecialPower,movementRadius);
+		  
+		icon = 'H';
 
+	}
+
+	
+	
+public Henchman(){
+	
+	icon = 'H';
+	
+}
+	
+	
 	public Weapons getWeapon() {
 		return weapon;
 	}
