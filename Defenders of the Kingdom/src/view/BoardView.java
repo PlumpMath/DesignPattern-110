@@ -24,6 +24,18 @@ public class BoardView implements Observer
     private JTextPane messageBox;
     private Board board;
     private JButton newButton = new JButton("New");
+    private JButton btnAvatar = new JButton("A");
+    private JButton btnSoldier = new JButton("S");
+    private JButton btnScout = new JButton("Sc");
+    private JButton btnMarksman = new JButton("M");
+    private JButton btnHenchman = new JButton("H");
+    private JButton btnFireLord = new JButton("F");
+    private JButton btnSword = new JButton("Sw");
+    private JButton btnArrow = new JButton("Ar");
+    private JButton btnBow = new JButton("Bo");
+    private JButton btnSpear = new JButton("Sp");
+    private JButton btnAttack = new JButton("Attack");
+    private JButton btnDefense = new JButton("Defense");
     private JButton resignButton = new JButton("Resign");
     private JLabel timer = new JLabel("0");
     private JLabel timeLimit = new JLabel("Time limit:");
@@ -53,6 +65,19 @@ public class BoardView implements Observer
         gui.add(tools, BorderLayout.PAGE_START);
         tools.add(newButton);
         tools.add(loadButton);
+        tools.add(btnAvatar);
+        tools.add(btnSoldier);
+        tools.add(btnScout);
+        tools.add(btnMarksman);
+        tools.add(btnHenchman);
+        tools.add(btnFireLord);
+        tools.add(btnSword);
+        tools.add(btnArrow);
+        tools.add(btnBow);
+        tools.add(btnSpear);
+        tools.add(btnSpear);
+        tools.add(btnAttack);
+        tools.add(btnDefense);
         saveButton.setEnabled(false);
         tools.add(saveButton);
         resignButton.setEnabled(false);
@@ -147,6 +172,60 @@ public class BoardView implements Observer
         frame.setVisible(true);
     }
     
+    public JButton getAvatarButton()
+    {
+    	return  btnAvatar;
+    }
+    
+    public JButton getFireLordButton()
+    {
+    	return  btnFireLord;
+    }
+    
+    
+    public JButton getHenchmanButton()
+    {
+    	return  btnHenchman;
+    }
+    
+    public JButton getMarksmanButton()
+    {
+    	return  btnMarksman;
+    }
+    
+    public JButton getSoldierButton()
+    {
+    	return  btnSoldier;
+    }
+    
+    public JButton getScoutButton()
+    {
+    	return  btnScout;
+    }
+    
+    public JButton getSwordButton()
+    {
+    	return  btnSword;
+    }
+    
+    public JButton getSpearButton()
+    {
+    	return  btnSpear;
+    }
+    
+    public JButton getArrowButton()
+    {
+    	return  btnArrow;
+    }
+    
+    
+    public JButton getBowButton()
+    {
+    	return  btnBow;
+    }
+    
+    
+    
     public JButton getUndoButton()
     {
     	return undoButton;
@@ -177,7 +256,19 @@ public class BoardView implements Observer
     	return resignButton;
     }
 
-    public JLabel getTimer()
+    public JButton getBtnAttack() {
+		return btnAttack;
+	}
+
+
+
+	public JButton getBtnDefense() {
+		return btnDefense;
+	}
+
+	
+
+	public JLabel getTimer()
     {
     	return timer;
     }

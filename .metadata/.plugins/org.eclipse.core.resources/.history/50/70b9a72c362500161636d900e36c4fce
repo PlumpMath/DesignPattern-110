@@ -1,0 +1,55 @@
+package attack;
+
+import interfaces.Weapons;
+import model.board.Cell;
+import model.manager.ValidMovement;
+import model.unit.Unit;
+import utilities.Direction;
+
+public class AttackUnit {
+
+	
+	public boolean attack(Cell attacker,Cell victim){
+	Unit attacking =	(Unit)attacker.getEntity();
+    Unit  	receiveattack =  (Unit)victim.getEntity();
+	    Weapons w = u.getWeapons();
+	    ValidMovement  isvalid =   u.getValidMovement();
+	for (Direction d: w.getDirection()){
+	                if (d.equals(Direction.HORIZONTAL))
+	                		{
+	                	    
+	                	           if( isvalid.isValidHorizontal(attacker, victim,attacking.getMovementRadius())){
+	                	        	   
+	                	        	    receiveattack.setHealth(attacking.getDamage());
+	                	           }
+	                	
+	                		}
+	                if(d.equals(Direction.VERTICAL))
+	                {
+	                    if( isvalid.isValidHorizontal(attacker, victim,attacking.getMovementRadius())){
+         	        	   
+         	           }
+	                	
+	                }
+	                	
+	              		
+		                if(d.equals(Direction.DIAGONAL))
+		                {
+		                    if( isvalid.isValidHorizontal(attacker, victim, attacking.getMovementRadius())){
+             	        	   
+		                	
+		                	
+		                } 
+	                 
+		                }
+		
+	}
+	//	w
+		//return true;
+		//else 
+			return false;
+			
+		
+	}
+	
+}

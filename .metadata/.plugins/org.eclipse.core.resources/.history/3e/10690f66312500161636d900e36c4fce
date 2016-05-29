@@ -1,0 +1,15 @@
+package attack;
+
+public class AttackUnit {
+
+	
+	public boolean attack(Cell attacker,Cell victim){
+		
+		return true;
+		else 
+			return false;
+			
+		
+	}
+	
+}

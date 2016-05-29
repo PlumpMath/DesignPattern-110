@@ -1,7 +1,10 @@
 package model.weapon;
 
 
+import java.util.ArrayList;
+
 import interfaces.Weapons;
+import utilities.Direction;
 
 public class Weapon  implements Weapons
 {
@@ -32,6 +35,11 @@ public class Weapon  implements Weapons
 		// TODO Auto-generated method stub
 		return name;
 	}
-	
+	public 	ArrayList<Direction> getDirection()
+	{
+		ArrayList<Direction> d =new  	ArrayList<Direction>();
+		d.add(Direction.HORIZONTAL);
+		return d;
+	}
 
 }

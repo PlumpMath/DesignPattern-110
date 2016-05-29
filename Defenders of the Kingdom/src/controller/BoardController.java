@@ -15,6 +15,7 @@ import javax.swing.JTextPane;
 
 import com.google.java.contract.Requires;
 
+import attack.AttackUnit;
 import model.Undo;
 import model.board.Board;
 import model.board.Cell;
@@ -23,6 +24,7 @@ import model.manager.Turn;
 import model.player.PlayerCreator;
 import model.save.GameState;
 import model.unit.Unit;
+import utilities.PlayerUtilities;
 import view.BoardView;
 
 public class BoardController implements ActionListener, MouseListener, PropertyChangeListener
@@ -33,10 +35,11 @@ public class BoardController implements ActionListener, MouseListener, PropertyC
 	private GameState gameState = new GameState();
 	private Movement movement = new Movement(this);
 	private Undo undo = new Undo();
-	
+	//private  PlayerUtilities playerUtilities =new PlayerUtilities();
 	private final static String INVALID_TIME_MESSAGE = "Invalid time";
 	private final static String OUT_OF_TIME_MESSAGE = "Out of time";
-
+    private AttackUnit attack =  new  AttackUnit();
+    private String attacker;
 	public BoardController(Board board, BoardView boardView)
 	{
 		this.board = board;
@@ -109,7 +112,48 @@ public class BoardController implements ActionListener, MouseListener, PropertyC
     		movementStyleChanged();
     	else if (component == boardView.getUndoButton())
     		Undo();
-    	else
+    	/*else if (component == boardView.getAvatarButton())
+    	{ if(turn.currentTurnPlayer().getTeam().getName()=="Heroes" )    
+    		playerUtilities.addHeroes("Avatar");
+    	else  playerUtilities.addVillains("Avatar");
+    	}
+    		else if (component == boardView.getSoldierButton())
+    		{ if(turn.currentTurnPlayer().getTeam().getName()=="Heroes" )    
+        		playerUtilities.addHeroes("Soldier");
+        	else  playerUtilities.addVillains("Soldier");
+        	}
+        	 
+    	
+         else if (component == boardView.getScoutButton())
+         { if(turn.currentTurnPlayer().getTeam().getName()=="Heroes" )    
+     		playerUtilities.addHeroes("Scout");
+     	else  playerUtilities.addVillains("Scout");
+     	}
+        	
+         else if (component == boardView.getFireLordButton())
+         { if(turn.currentTurnPlayer().getTeam().getName()=="Heroes" )    
+      		playerUtilities.addHeroes("FireLord");
+      	else  playerUtilities.addVillains("FireLord");
+      	}
+        	
+    	
+         else if (component == boardView.getHenchmanButton())
+         { if(turn.currentTurnPlayer().getTeam().getName()=="Heroes" )    
+       		playerUtilities.addHeroes("Henchman");
+       	else  playerUtilities.addVillains("Henchman");
+       	}
+        
+         else if (component == boardView.getMarksmanButton())
+         { if(turn.currentTurnPlayer().getTeam().getName()=="Heroes" )    
+        		playerUtilities.addHeroes("Marksman");
+        	else  playerUtilities.addVillains("Marksman");
+        	}*/
+        
+         else if (component == boardView.getBtnAttack())
+         { 
+     		 	  attack();  		
+         }
+         else
     		cellClicked(e);
 	}
     
@@ -216,8 +260,12 @@ public class BoardController implements ActionListener, MouseListener, PropertyC
     @Requires("StartGame()")
     private void cellClicked(ActionEvent e)
     {
+    	
     	if (!dragAndDropEnabled)
     		makeMove(e.getActionCommand());
+    	
+    	
+    	
     }
 
     private void makeMove(String cellPos)
@@ -369,4 +417,11 @@ public class BoardController implements ActionListener, MouseListener, PropertyC
 	{
 		dragAndDropEnabled = dragAndDrop;
 	}
+	
+  public boolean attack(){
+	
+	  attack.attack();
+	  return false;
+  }
+	
 }

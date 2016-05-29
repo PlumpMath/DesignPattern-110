@@ -8,21 +8,29 @@ public class PlayerUtilities {
 	public static ArrayList<String> heroes = new ArrayList<String>();
 	
 	public static ArrayList<String> fetchheroes(){
-	heroes.add("Soldier");
+	/*heroes.add("Soldier");
 	heroes.add("Scout");
-	heroes.add("Avatar");
+	heroes.add("Avatar");*/
 	
 	return heroes;
-
-	
-	
 	}
 	
 	
+    public void addHeroes(String str){
+    	
+    	heroes.add(str);
+    }
+	
+public void addVillains(String str){
+    	villians.add(str);
+    	
+    }
+    
+	
 	public static ArrayList<String> fetchvillians(){
-		villians.add("FireLord");
+		/*villians.add("FireLord");
 		villians.add("Henchman");
-		villians.add("Marksman");
+		villians.add("Marksman");*/
 		
 	return villians;
 

@@ -36,11 +36,11 @@ public class WeaponDecorator  implements Weapons
 		return 0;
 	}
 	
-
-	public 	ArrayList<Direction> geDirection()
+	@Override
+	public 	ArrayList<Direction> getDirection()
 	{
-		ArrayList<Direction> d =new  	ArrayList<Direction>();
-		d.add(Direction.STRAIGHT_LINE);
+		ArrayList<Direction> d =  new ArrayList<Direction>();
+		d.add(Direction.VERTICAL);
 		return d;
 	}
 

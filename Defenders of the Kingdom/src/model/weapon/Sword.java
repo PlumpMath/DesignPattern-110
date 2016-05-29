@@ -37,9 +37,10 @@ String name;
 		public 	ArrayList<Direction> geDirection()
 		{
 			ArrayList<Direction> d =new  	ArrayList<Direction>();
-			d.add(Direction.STRAIGHT_LINE);
-			d.add(Direction.DIAGONAL);
+			//d.add(Direction.STRAIGHT_LINE);
+			//d.add(Direction.DIAGONAL);
 			d.add(Direction.CIRCULAR);
+			d.add(Direction.DIAGONAL);
 			return d;
 		}
 

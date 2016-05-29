@@ -1,5 +1,9 @@
 package interfaces;
 
+import java.util.ArrayList;
+
+import utilities.Direction;
+
 public interface Weapons {
 
 
@@ -12,7 +16,9 @@ public interface Weapons {
 	public String getName();
 	
 	
-	
+	public 	ArrayList<Direction> getDirection();
+
+
 	
 }
 

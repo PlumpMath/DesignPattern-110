@@ -3,7 +3,7 @@ package utilities;
 
 public enum Direction {
 	
-	  STRAIGHT_LINE, DIAGONAL, ANY,CIRCULAR
+	  STRAIGHT_LINE, DIAGONAL, ANY,CIRCULAR,HORIZONTAL,VERTICAL
 
 }
 

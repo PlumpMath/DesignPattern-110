@@ -2,6 +2,7 @@ package model.unit;
 
 import java.util.ArrayList;
 
+import interfaces.Weapons;
 import model.board.Cell;
 import model.weapon.Weapon;
 
@@ -10,7 +11,7 @@ public class Soldier extends Unit
 	@SuppressWarnings("unused")
 	private boolean attackflag;
 	
-	Weapon weapon; 
+	Weapons weapon; 
 
 	public Soldier(String name, int health, int damage, boolean meleeAttack, int startingX, int startingY,
 			int attackRadius, boolean cannotUseSpecialPower, int movementRadius)
@@ -20,12 +21,11 @@ public class Soldier extends Unit
 		attackflag = false;
 
 	}
-	
-	public Weapon getWeapon() {
+	public Weapons getWeapon() {
 		return weapon;
 	}
 
-	public void setWeapon(Weapon weapon) {
+	public void setWeapon(Weapons weapon) {
 		this.weapon = weapon;
 	}
 	public boolean isMoveValid(Cell initialCell, Cell finalCell)

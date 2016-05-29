@@ -2,6 +2,7 @@ package model.unit;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import interfaces.Weapons;
 import model.board.Cell;
 import model.entity.Entity;
 import model.manager.ValidMovement;
@@ -21,7 +22,41 @@ public abstract class Unit extends Entity  implements Cloneable
 	protected int movementRadius;
 	@JsonIgnore
 	protected Team team;
-	protected Weapon weapon;
+	protected Weapons weapons;
+	public Weapons getWeapons() {
+		return weapons;
+	}
+
+
+
+
+
+
+
+	public void setWeapons(Weapons weapons) {
+		this.weapons = weapons;
+	}
+
+
+
+
+
+
+
+	public ValidMovement getValidMovement() {
+		return validMovement;
+	}
+
+
+
+
+
+
+
+	public void setValidMovement(ValidMovement validMovement) {
+		this.validMovement = validMovement;
+	}
+
 	protected ValidMovement validMovement = new ValidMovement();
 //	protected Weapon weaponManager = new Weapon(attackRadius,damage,"new weapon");
 	
@@ -29,8 +64,8 @@ public abstract class Unit extends Entity  implements Cloneable
 	
 	
 	public Unit(String name, int health, int damage, boolean meleeAttack, int startingX, int startingY,
-			int attackRadius, boolean cannotUseSpecialPower, int movementRadius, Team team, Weapon weapon,
-			ValidMovement validMovement, Weapon weaponManager) {
+			int attackRadius, boolean cannotUseSpecialPower, int movementRadius, Team team, Weapons weapon,
+			ValidMovement validMovement) {
 	
 		this.name = name;
 		this.health = health;
@@ -42,9 +77,9 @@ public abstract class Unit extends Entity  implements Cloneable
 		this.cannotUseSpecialPower = cannotUseSpecialPower;
 		this.movementRadius = movementRadius;
 		this.team = team;
-		this.weapon = weapon;
+		this.weapons = weapon;
 		this.validMovement = validMovement;
-		this.weapon = weaponManager;
+	
 	}
 
 	
@@ -102,7 +137,7 @@ public abstract class Unit extends Entity  implements Cloneable
 	
 	public int getAttackRadius()
 	{
-		return weapon.getAttackRadius();
+		return weapons.getAttackRadius();
 	}
 	
 	public String getName()
@@ -127,7 +162,7 @@ public abstract class Unit extends Entity  implements Cloneable
 	
 	public int getDamage()
 	{
-		return weapon.getDamage();
+		return weapons.getDamage();
 	}
 
 	public boolean isMeleeAttack()

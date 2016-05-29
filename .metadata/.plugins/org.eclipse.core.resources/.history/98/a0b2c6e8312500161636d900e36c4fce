@@ -1,0 +1,17 @@
+package attack;
+
+import model.board.Cell;
+
+public class AttackUnit {
+
+	
+	public boolean attack(Cell attacker,Cell victim){
+		
+		return true;
+		else 
+			return false;
+			
+		
+	}
+	
+}

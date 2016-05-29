@@ -1,5 +1,6 @@
 package model.unit;
 
+import interfaces.Weapons;
 import model.board.Cell;
 import model.weapon.Weapon;
 
@@ -7,7 +8,7 @@ public class FireLord extends Unit
 {
 	int lifelost;
 	
-	Weapon weapon; 
+	Weapons weapon; 
 
 	
 	public FireLord(String name, int health, int damage, boolean meleeAttack, int startingX, int startingY,
@@ -20,11 +21,11 @@ public class FireLord extends Unit
 	
 	}
 	
-	public Weapon getWeapon() {
+	public Weapons getWeapon() {
 		return weapon;
 	}
 
-	public void setWeapon(Weapon weapon) {
+	public void setWeapon(Weapons weapon) {
 		this.weapon = weapon;
 	}
 	

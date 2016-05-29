@@ -1,11 +1,12 @@
 package model.unit;
 
+import interfaces.Weapons;
 import model.board.Cell;
 import model.weapon.Weapon;
 
 public class Marksman extends Unit
 {
-	Weapon weapon; 
+	Weapons weapon; 
 	
 
 	public Marksman(String name, int health, int damage, boolean meleeAttack, int startingX, int startingY,
@@ -16,14 +17,15 @@ public class Marksman extends Unit
 			
 		}
 
-	public Weapon getWeapon() {
+	public Weapons getWeapon() {
 		return weapon;
 	}
 
-	public void setWeapon(Weapon weapon) {
+	public void setWeapon(Weapons weapon) {
 		this.weapon = weapon;
-	}	
-
+	}
+	
+	
 	
 	public boolean isMoveValid(Cell initialCell, Cell finalCell)
 	{

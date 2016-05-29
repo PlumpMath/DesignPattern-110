@@ -10,6 +10,10 @@ import model.unit.Marksman;
 import model.unit.Scout;
 import model.unit.Soldier;
 import model.unit.Unit;
+import model.weapon.Arrow;
+import model.weapon.Bow;
+import model.weapon.Spear;
+import model.weapon.Sword;
 import model.weapon.Weapon;
 
 public class PrototypeUnitCache {
@@ -31,30 +35,36 @@ public class PrototypeUnitCache {
 	 //  startingX,startingY,attackRadius,cannotUseSpecialPower,movementRadius
 	   
 	   unitMap.put(avatar.getName(),avatar);
-	   
+	   avatar.setWeapon(new Bow(new Spear(weapon,"Avtar Arrow"),"Avatar's Bow"));
 	   FireLord firelord = new  FireLord("FireLord",12,5,true,4,2,12,false,4); 
-               firelord.setWeapon(weapon);
+              // firelord.setWeapon(weapon);
+               avatar.setWeapon(new Bow(new Sword(weapon,"Firelordsword"),"Avatar's Bow"));
+               
 	   unitMap.put(firelord.getName(),firelord);
 	   
 		  Scout scout = new Scout("Scout",3,2,true,9,7,2,false,3); 
 
+		 // scout.setWeapon(weapon);
 		  scout.setWeapon(weapon);
-
 		   unitMap.put( scout.getName(), scout);
 		   
 		   scout.setWeapon(weapon);
 			Soldier soldier = new Soldier("Soldier",7,3,true,3,8,1,false,2); 
-			soldier.setWeapon(weapon);
-			   unitMap.put( soldier.getName(), soldier);
+			//soldier.setWeapon(weapon);
+			soldier.setWeapon(new Sword(weapon,"solddier's sword"));  
+			unitMap.put( soldier.getName(), soldier);
 
 				
 				Henchman henchman = new Henchman("Henchman",9,4,true,2,4,2,false,3); 
-				henchman.setWeapon(weapon);
-				   unitMap.put( henchman.getName(), henchman);
+				//henchman.setWeapon(weapon);
+				henchman.setWeapon(new Spear(weapon,"Henchman Spear"));  
+				unitMap.put( henchman.getName(), henchman);
 				   
 				
 					Marksman marksman = new Marksman("Marksman",7,1,true,7,1,2,false,3); 
-					marksman.setWeapon(weapon);
+				//	marksman.setWeapon(weapon);
+					marksman.setWeapon(new Bow(new Arrow(weapon,"Marksman Arrow"),"Marksman bow arrow") );
+					
 					   unitMap.put( marksman.getName(), marksman);
 					   
 					   

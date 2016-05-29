@@ -1,0 +1,19 @@
+package attack;
+
+import model.board.Cell;
+import model.unit.Unit;
+
+public class AttackUnit {
+
+	
+	public boolean attack(Cell attacker,Cell victim){
+	Unit u =	(Unit)attacker.getEntity()
+		
+		//return true;
+		//else 
+			return false;
+			
+		
+	}
+	
+}

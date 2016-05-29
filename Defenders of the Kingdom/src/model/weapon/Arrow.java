@@ -32,9 +32,11 @@ String name;
 	public 	ArrayList<Direction> geDirection()
 	{
 		ArrayList<Direction> d =new  	ArrayList<Direction>();
-		d.add(Direction.STRAIGHT_LINE);
+		d.add(Direction.VERTICAL);
+		d.add(Direction.HORIZONTAL);
 		d.add(Direction.DIAGONAL);
-		d.add(Direction.CIRCULAR);
+		//d.add(Direction.DIAGONAL);
+		//d.add(Direction.CIRCULAR);
 		return d;
 	}
 	public int getNumWeapons()

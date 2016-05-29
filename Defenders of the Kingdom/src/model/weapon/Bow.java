@@ -37,8 +37,8 @@ public class Bow  extends WeaponDecorator{
 		public 	ArrayList<Direction> geDirection()
 		{
 			ArrayList<Direction> d =new  	ArrayList<Direction>();
-			d.add(Direction.STRAIGHT_LINE);
-			d.add(Direction.DIAGONAL);
+		//	d.add(Direction.STRAIGHT_LINE);
+			d.add(Direction.VERTICAL);
 			return d;
 		}
 

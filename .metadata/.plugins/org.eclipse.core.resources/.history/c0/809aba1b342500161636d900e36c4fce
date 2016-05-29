@@ -1,0 +1,57 @@
+package model.weapon;
+
+import java.util.ArrayList;
+
+import interfaces.Weapons;
+import utilities.Direction;
+
+public class Bow  extends WeaponDecorator{
+	String name;
+
+		public Bow(Weapons weapons,String name) {
+			super(weapons);
+		
+		this.name =name;
+			// TODO Auto-generated constructor stub
+		}
+		
+		
+		@Override
+		public int getAttackRadius()
+		{
+			return super.getAttackRadius() +4 ;
+		}
+		
+		@Override
+		public int getDamage()
+		{
+			if( super.getAttackRadius() >=2 && super.getAttackRadius() <=4)
+			return super.getDamage() +2 ;
+			else if(super.getAttackRadius()<2)
+				return  super.getDamage() -1;
+			else  return  super.getDamage()+1 ; 
+					
+			
+		}
+		
+		public 	ArrayList<Direction> geDirection()
+		{
+			ArrayList<Direction> d =new  	ArrayList<Direction>();
+		//	d.add(Direction.STRAIGHT_LINE);
+			d.add(Direction.Vertcial);
+			return d;
+		}
+
+
+		public int getNumWeapons()
+		{
+			return super.getNumWeapons()+1;
+		}
+
+		@Override
+		public String getName() {
+			// TODO Auto-generated method stub
+			return name;
+		}
+
+	}

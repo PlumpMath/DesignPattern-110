@@ -1,0 +1,36 @@
+package attack;
+
+import interfaces.Weapons;
+import model.board.Cell;
+import model.unit.Unit;
+import utilities.Direction;
+
+public class AttackUnit {
+
+	
+	public boolean attack(Cell attacker,Cell victim){
+	Unit u =	(Unit)attacker.getEntity();
+	    Weapons w = u.getWeapons();
+	    
+	for (Direction d: w.getDirection()){
+	                if (d.equals(Direction.HORIZONTAL)
+	                		
+	                if(d.equals(Direction.VERTICAL))
+	                	
+	                	
+	              		
+		                if(d.equals(Direction.DIAGONAL))
+		                 
+	                 
+		
+		
+	}
+	//	w
+		//return true;
+		//else 
+			return false;
+			
+		
+	}
+	
+}

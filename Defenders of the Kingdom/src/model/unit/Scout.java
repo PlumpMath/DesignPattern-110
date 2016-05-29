@@ -1,12 +1,13 @@
 package model.unit;
 import java.util.Scanner;
 
+import interfaces.Weapons;
 import model.board.Cell;
 import model.weapon.Weapon;
 
 public class Scout extends Unit
 {	
-	Weapon weapon;  
+	Weapons weapon; 
 
 	public Scout(String name, int health, int damage, boolean meleeAttack, int startingX, int startingY,
 			int attackRadius, boolean cannotUseSpecialPower, int movementRadius)
@@ -18,11 +19,11 @@ public class Scout extends Unit
 	}
 	
 	
-	public Weapon getWeapon() {
+	public Weapons getWeapon() {
 		return weapon;
 	}
 
-	public void setWeapon(Weapon weapon) {
+	public void setWeapon(Weapons weapon) {
 		this.weapon = weapon;
 	}
 	public boolean isMoveValid(Cell initialCell, Cell finalCell)
