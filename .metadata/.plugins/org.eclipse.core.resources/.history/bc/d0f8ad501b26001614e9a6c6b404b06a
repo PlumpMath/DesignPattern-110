@@ -1,0 +1,16 @@
+package model.save;
+
+import view.BoardView;
+
+public class Facade {
+
+	
+	BoardView boardview;
+	
+	public Facade(){
+		
+		boardView =new BoardView(null);
+		
+	}
+	
+}

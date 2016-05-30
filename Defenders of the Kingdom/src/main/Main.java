@@ -13,4 +13,8 @@ public class Main
 		BoardView boardView = new BoardView(board);
 		BoardController boardController = new BoardController(board, boardView);
 	}
+	
+	
+	
+	
 }

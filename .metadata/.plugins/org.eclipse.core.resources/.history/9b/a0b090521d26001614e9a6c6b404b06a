@@ -1,0 +1,61 @@
+package model.board;
+
+import model.player.Player;
+import view.BoardView;
+
+public class Facade {
+
+private 	Board board;
+//	BoardView boardview;
+	
+	public Facade(){
+		board =new Board();
+	//	boardView =new BoardView(null);
+		
+	}
+	
+	
+	public Board copyBoard()
+	{
+	return board.copyBoard();
+	}
+	
+	public void placeUnits(Player[] players)
+	{
+		board.placeUnits(Player[] players);
+		
+	}
+	
+	public int getX()
+	{
+		return board.getX();
+	}
+	
+	public int getY()
+	{
+		return board.getY();
+	}
+	
+	public Cell getCell(int x, int y)
+	{
+	          return  board.getCell(x, y);
+	}
+	
+	public Cell[][] getAllCells()
+	{
+		
+		
+		return board.getAllCells();
+	}
+	
+	public void setAllCells(Cell[][] cells)
+	{
+		this.cells = cells;
+	}
+	
+	
+	
+	
+	
+	
+}

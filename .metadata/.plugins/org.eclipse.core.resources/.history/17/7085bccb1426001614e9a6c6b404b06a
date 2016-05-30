@@ -1,0 +1,14 @@
+package view;
+
+public class Facade {
+
+	
+	BoardView boardview;
+	
+	public Facade(){
+		
+		
+		
+	}
+	
+}

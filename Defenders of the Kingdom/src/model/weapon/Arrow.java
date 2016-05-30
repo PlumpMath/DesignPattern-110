@@ -43,6 +43,10 @@ String name;
 	{
 		return super.getNumWeapons()+1;
 	}
+	
+	public int getCount(){
+		return super.getCount()+1;
+	}
 
 	@Override
 	public String getName() {

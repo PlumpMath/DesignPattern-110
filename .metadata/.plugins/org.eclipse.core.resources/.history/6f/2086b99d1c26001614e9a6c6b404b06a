@@ -1,0 +1,16 @@
+package model.board;
+
+import view.BoardView;
+
+public class Facade {
+
+	Board board
+//	BoardView boardview;
+	
+	public Facade(){
+		
+	//	boardView =new BoardView(null);
+		
+	}
+	
+}

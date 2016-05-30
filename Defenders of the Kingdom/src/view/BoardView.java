@@ -24,12 +24,12 @@ public class BoardView implements Observer
     private JTextPane messageBox;
     private Board board;
     private JButton newButton = new JButton("New");
-    private JButton btnAvatar = new JButton("A");
+   /* private JButton btnAvatar = new JButton("A");
     private JButton btnSoldier = new JButton("S");
     private JButton btnScout = new JButton("Sc");
     private JButton btnMarksman = new JButton("M");
     private JButton btnHenchman = new JButton("H");
-    private JButton btnFireLord = new JButton("F");
+    private JButton btnFireLord = new JButton("F");*/
     private JButton btnSword = new JButton("Sw");
     private JButton btnArrow = new JButton("Ar");
     private JButton btnBow = new JButton("Bo");
@@ -65,12 +65,12 @@ public class BoardView implements Observer
         gui.add(tools, BorderLayout.PAGE_START);
         tools.add(newButton);
         tools.add(loadButton);
-        tools.add(btnAvatar);
+      /*  tools.add(btnAvatar);
         tools.add(btnSoldier);
         tools.add(btnScout);
         tools.add(btnMarksman);
         tools.add(btnHenchman);
-        tools.add(btnFireLord);
+        tools.add(btnFireLord);*/
         tools.add(btnSword);
         tools.add(btnArrow);
         tools.add(btnBow);
@@ -172,7 +172,7 @@ public class BoardView implements Observer
         frame.setVisible(true);
     }
     
-    public JButton getAvatarButton()
+   /* public JButton getAvatarButton()
     {
     	return  btnAvatar;
     }
@@ -201,7 +201,7 @@ public class BoardView implements Observer
     public JButton getScoutButton()
     {
     	return  btnScout;
-    }
+    }*/
     
     public JButton getSwordButton()
     {

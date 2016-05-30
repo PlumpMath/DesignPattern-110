@@ -25,6 +25,7 @@ public class PrototypeUnitCache {
 	public static int  i=0 ;
 	   private static HashMap<String, Unit> unitMap  = new HashMap<String,Unit>(); 
 		public static HashMap<String,Weapons> lstweapon = new  HashMap<String,Weapons>();
+		private static Weapon weapon;
    public static Unit getUnit(String Unitname){
 	   
 	   Unit getCacheUnit =  unitMap.get(Unitname);
@@ -34,7 +35,8 @@ public class PrototypeUnitCache {
    
    public static void  loadCache(){
 	   i++;
-	   Weapon weapon =new Weapon(1, 1,"newweapon");
+	   weapon =new Weapon(1, 1,"Arrow");
+	   //  Weapon weapon =new Weapon(1, 1,"newweapon");
 	  // Avatar avatar = new  Avatar("Avatar",10,6,true,6,9,14,false,5); 
 	   Avatar avatar = new  Avatar("Avatar",30,6,true,14,false,5); 
 		  
@@ -94,7 +96,10 @@ public class PrototypeUnitCache {
    
    
    public static    HashMap<String,Weapons>fetchWeapons(String unit,String weaponname){
-	   Weapon weapon =new Weapon(1, 1,"Arrow");
+	
+	   if(lstweapon.isEmpty()){
+		   
+	   
 	if(weaponname == "Sword")
 	lstweapon.put(unit,new Sword(weapon,unit+"Arrow"));
 	
@@ -102,12 +107,12 @@ public class PrototypeUnitCache {
 		lstweapon.put(unit,new Spear(weapon,unit+"Arrow"));
 		
 	if(weaponname == "Bow")
-		lstweapon.put(unit,new Bow(weapon,unit+"Arrow"));
+		lstweapon.put(unit,new Bow(weapon,unit+"Bow"));
 		
 	if(weaponname == "Arrow")
 		lstweapon.put(unit,new Arrow(weapon,unit+"Arrow"));
 		
-	   
+	   }
 	return lstweapon;
 }
 	

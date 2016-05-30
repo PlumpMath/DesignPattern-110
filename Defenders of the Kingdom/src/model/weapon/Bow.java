@@ -22,6 +22,12 @@ public class Bow  extends WeaponDecorator{
 			return super.getAttackRadius() +4 ;
 		}
 		
+		
+		public int getCount(){
+			return super.getCount()+1;
+		}
+		
+		
 		@Override
 		public int getDamage()
 		{

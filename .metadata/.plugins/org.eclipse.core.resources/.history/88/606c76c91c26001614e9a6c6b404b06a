@@ -1,0 +1,26 @@
+package model.board;
+
+import view.BoardView;
+
+public class Facade {
+
+private 	Board board;
+//	BoardView boardview;
+	
+	public Facade(){
+		board =new Board();
+	//	boardView =new BoardView(null);
+		
+	}
+	
+	
+	public Board copyBoard()
+	{
+	 board.copyBoard()
+	}
+	
+	
+	
+	
+	
+}

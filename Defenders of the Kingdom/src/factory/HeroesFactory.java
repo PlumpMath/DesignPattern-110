@@ -31,6 +31,8 @@ private static int y =4;
 		
 		System.out.println(x);
 		  System.out.println(y);
+		  System.out.println("size of heroeslist"+PlayerUtilities.fetchheroes().size());
+		
 		for(String  s  :PlayerUtilities.fetchheroes() ) {
 		
 			if(s == "Scout"){
@@ -54,7 +56,7 @@ private static int y =4;
 				 h.getUnits().add(soldier);
 			}
 			
-			if(s == "Avatar"){
+		/*	if(s == "Avatar"){
 				
 			Avatar av = (Avatar)PrototypeUnitCache.getUnit("Avatar");
 			   av.setWeapon(PrototypeUnitCache.fetchWeapons( "Avatar", PlayerUtilities.lstweapon.get( "Avatar")).get( "Avatar")) ;
@@ -64,7 +66,7 @@ private static int y =4;
             y++;
 			
 			h.getUnits().add(av);
-		}
+		}*/
 			
 			
 			if(s == "Henchman"){
@@ -90,7 +92,7 @@ private static int y =4;
 				 h.getUnits().add(m1);
 			}
 			
-			if(s == "FireLord"){
+		/*	if(s == "FireLord"){
 				
 				FireLord f1 = (FireLord)PrototypeUnitCache.getUnit("FireLord");
 				 f1.setWeapon(PrototypeUnitCache.fetchWeapons( "FireLord", PlayerUtilities.lstweapon.get( "FireLord")).get( "FireLord")) ; 
@@ -99,11 +101,18 @@ private static int y =4;
 				f1.setStartingY(y);
 	            y++;
 				 h.getUnits().add(f1);
-		}
+		}*/
 			
 			
 	}
+		Avatar av = (Avatar)PrototypeUnitCache.getUnit("Avatar");
+		   av.setWeapon(PrototypeUnitCache.fetchWeapons( "Avatar", PlayerUtilities.lstweapon.get( "Avatar")).get( "Avatar")) ;
+			 
+		av.setStartingX(x);
+		av.setStartingY(y);
+     y++;
 		
+		h.getUnits().add(av);
 		h.setColour(Color.red);
 		h.setName("Heroes");
 	return  h;

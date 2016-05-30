@@ -22,6 +22,11 @@ int distance  ;
 		return super.getAttackRadius() +2 ;
 	}
 	
+	public int getCount(){
+		return super.getCount()+1;
+	}
+	
+	
 	@Override
 	public int getDamage()
 	{

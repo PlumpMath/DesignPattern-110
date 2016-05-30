@@ -51,17 +51,7 @@ public class VilliansFactory  extends AbstractTeamfactory{
 							 v.getUnits().add(soldier);
 						}
 						
-						if(s == "Avatar"){
-							
-						Avatar av = (Avatar)PrototypeUnitCache.getUnit("Avatar");
-						   av.setWeapon(PrototypeUnitCache.fetchWeapons( "Avatar", PlayerUtilities.lstweapon.get( "Avatar")).get( "Avatar")) ;
-							
-						av.setStartingX(x);
-						av.setStartingY(y);
-			            y++;
-						
-						v.getUnits().add(av);
-					}
+	
 						
 						
 						if(s == "Henchman"){
@@ -88,7 +78,7 @@ public class VilliansFactory  extends AbstractTeamfactory{
 							 v.getUnits().add(m1);
 						}
 						
-						if(s == "FireLord"){
+					/*	if(s == "FireLord"){
 							
 							FireLord f1 = (FireLord)PrototypeUnitCache.getUnit("FireLord");
 							 f1.setWeapon(PrototypeUnitCache.fetchWeapons( "FireLord", PlayerUtilities.lstweapon.get( "FireLord")).get( "FireLord")) ; 
@@ -97,11 +87,17 @@ public class VilliansFactory  extends AbstractTeamfactory{
 							f1.setStartingY(y);
 				            y++;
 							 v.getUnits().add(f1);
-					}
+					}*/
 							
 					
 			}
-				
+				FireLord f1 = (FireLord)PrototypeUnitCache.getUnit("FireLord");
+				 f1.setWeapon(PrototypeUnitCache.fetchWeapons( "FireLord", PlayerUtilities.lstweapon.get( "FireLord")).get( "FireLord")) ; 
+					
+				f1.setStartingX(x);
+				f1.setStartingY(y);
+	            y++;
+				 v.getUnits().add(f1);
 				v.setColour(Color.blue);
 				v.setName("Villains");
 				

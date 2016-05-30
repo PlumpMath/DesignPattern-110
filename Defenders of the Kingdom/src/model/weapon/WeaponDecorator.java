@@ -44,6 +44,10 @@ public class WeaponDecorator  implements Weapons
 		return d;
 	}
 
+	
+	public int getCount(){
+		return 1;
+	}
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub

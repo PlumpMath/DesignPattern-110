@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="utilities.PlayerUtilities"/>
-<fullyQualifiedTypeName name="model.weapon.Bow"/>
-<fullyQualifiedTypeName name="model.weapon.Arrow"/>
-<fullyQualifiedTypeName name="model.weapon.Sword"/>
-<fullyQualifiedTypeName name="model.weapon.Spear"/>
 <fullyQualifiedTypeName name="model.board.Cell"/>
 <fullyQualifiedTypeName name="model.unit.Unit"/>
-<fullyQualifiedTypeName name="interfaces.Weapons"/>
 <fullyQualifiedTypeName name="utilities.Direction"/>
 <fullyQualifiedTypeName name="model.manager.ValidMovement"/>
 <fullyQualifiedTypeName name="attack.AttackUnit"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="interfaces.Weapons"/>
+<fullyQualifiedTypeName name="model.weapon.Sword"/>
+<fullyQualifiedTypeName name="model.weapon.Spear"/>
+<fullyQualifiedTypeName name="model.weapon.Bow"/>
+<fullyQualifiedTypeName name="model.weapon.Arrow"/>
+<fullyQualifiedTypeName name="Prototype.PrototypeUnitCache"/>
+<fullyQualifiedTypeName name="utilities.PlayerUtilities"/>
 </qualifiedTypeNameHistroy>

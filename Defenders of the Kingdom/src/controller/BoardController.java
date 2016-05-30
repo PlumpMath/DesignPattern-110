@@ -19,6 +19,7 @@ import attack.AttackUnit;
 import model.Undo;
 import model.board.Board;
 import model.board.Cell;
+import model.board.Facade;
 import model.manager.Movement;
 import model.manager.Turn;
 import model.player.PlayerCreator;
@@ -31,6 +32,7 @@ public class BoardController implements ActionListener, MouseListener, PropertyC
 {
 	private Board board;
 	private BoardView boardView;
+	private Facade facade;
 	private Turn turn = new Turn(this);
 	private GameState gameState = new GameState();
 	private Movement movement = new Movement(this);
