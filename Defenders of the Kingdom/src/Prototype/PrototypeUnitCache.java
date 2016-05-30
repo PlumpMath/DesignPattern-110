@@ -97,7 +97,7 @@ public class PrototypeUnitCache {
    
    public static    HashMap<String,Weapons>fetchWeapons(String unit,String weaponname){
 	
-	  if(lstweapon.isEmpty()||!lstweapon.contains(unit)){
+	  if(lstweapon.isEmpty()||!lstweapon.containsKey(unit)){
 		   
 	   
 	if(weaponname == "Sword")
