@@ -16,10 +16,10 @@ import javax.swing.JTextPane;
 import com.google.java.contract.Requires;
 
 import attack.AttackUnit;
-import main.Facade;
 import model.Undo;
 import model.board.Board;
 import model.board.Cell;
+import model.board.Facade;
 import model.manager.Movement;
 import model.manager.Turn;
 import model.player.PlayerCreator;

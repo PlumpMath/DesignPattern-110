@@ -101,7 +101,7 @@ public class PrototypeUnitCache {
 		   
 	   
 	if(weaponname == "Sword")
-	lstweapon.put(unit,new Sword(weapon,unit+"Sword"));
+	lstweapon.put(unit,new Sword(weapon,unit+"Arrow"));
 
 	if(weaponname == "Spear")
 		lstweapon.put(unit,new Spear(weapon,unit+"Spear"));

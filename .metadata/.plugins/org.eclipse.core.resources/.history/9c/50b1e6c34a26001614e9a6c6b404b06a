@@ -13,9 +13,9 @@ public class Main
 		
 		f.initializeBoard();
 		
-		/*Board board = new Board();
+		Board board = new Board();
 		BoardView boardView = new BoardView(board);
-		BoardController boardController = new BoardController(board, boardView);*/
+		BoardController boardController = new BoardController(board, boardView);
 	}
 	
 	

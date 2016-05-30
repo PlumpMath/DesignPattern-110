@@ -97,14 +97,14 @@ public class PrototypeUnitCache {
    
    public static    HashMap<String,Weapons>fetchWeapons(String unit,String weaponname){
 	
-	//   if(lstweapon.isEmpty()){
+	   if(lstweapon.isEmpty()){
 		   
 	   
 	if(weaponname == "Sword")
-	lstweapon.put(unit,new Sword(weapon,unit+"Sword"));
-
+	lstweapon.put(unit,new Sword(weapon,unit+"Arrow"));
+	
 	if(weaponname == "Spear")
-		lstweapon.put(unit,new Spear(weapon,unit+"Spear"));
+		lstweapon.put(unit,new Spear(weapon,unit+"Arrow"));
 		
 	if(weaponname == "Bow")
 		lstweapon.put(unit,new Bow(weapon,unit+"Bow"));
@@ -112,7 +112,7 @@ public class PrototypeUnitCache {
 	if(weaponname == "Arrow")
 		lstweapon.put(unit,new Arrow(weapon,unit+"Arrow"));
 		
-	  // }
+	   }
 	return lstweapon;
 }
 	

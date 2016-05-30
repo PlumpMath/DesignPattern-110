@@ -9,13 +9,9 @@ public class Main
 	@SuppressWarnings("unused")
 	public static void main(String[] args)
 	{   
-		Facade f = new Facade();
-		
-		f.initializeBoard();
-		
-		/*Board board = new Board();
+		Board board = new Board();
 		BoardView boardView = new BoardView(board);
-		BoardController boardController = new BoardController(board, boardView);*/
+		BoardController boardController = new BoardController(board, boardView);
 	}
 	
 	
