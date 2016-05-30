@@ -117,12 +117,6 @@ public class PrototypeUnitCache {
 	  if(lstweapon.containsKey(unit)){
 			if(weaponname == "Sword")
 		  lstweapon.put(unit,new Sword(lstweapon.get(unit),unit+"sword"));
-			if(weaponname == "Spear")
-				  lstweapon.put(unit,new Sword(lstweapon.get(unit),unit+"spear"));	
-			if(weaponname == "Bow")
-				 lstweapon.put(unit,new Sword(lstweapon.get(unit),unit+"Bow"));
-			if(weaponname == "Arrow")
-				lstweapon.put(unit,new Arrow(weapon,unit+"Bow"));	
 	  }
 	  
 	return lstweapon;
